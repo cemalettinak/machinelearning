@@ -6,9 +6,7 @@ Created on Fri May 26 11:27:30 2023
 """
 
 
+# Categorical transformation
+data['AdmissionType'] = data['AdmissionType'].astype('category')
 
 
-# Categorical conversion for XGBoost
-from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-data['AdmissionType'] = le.fit_transform(data['AdmissionType'])
